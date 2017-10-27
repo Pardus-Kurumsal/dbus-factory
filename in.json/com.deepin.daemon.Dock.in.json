@@ -1,0 +1,29 @@
+{
+	"Config": {
+		"OutputDir": ".",
+		"InputDir": "../xml",
+		"BusType": "Session",
+		"DestName": "com.deepin.daemon.Dock"
+	},
+	"Interfaces": [
+		{
+			"Interface": "dde.dock.DockedAppManager",
+			"OutFile": "dock",
+			"XMLFile": "com.deepin.daemon.Dock.xml",
+			"ObjectName": "DockedAppManager"
+		},
+		{
+			"Interface": "dde.dock.DockSetting",
+			"OutFile": "dock-setting",
+			"XMLFile": "dde.dock.DockSetting.xml",
+			"ObjectName": "DockSetting"
+		},
+		{
+			"Interface": "dde.dock.DockRegion",
+			"OutFile": "dock-region",
+			"XMLFile": "dde.dock.DockRegion.xml",
+			"ObjectName": "DockRegion"
+		}
+	]
+}
+

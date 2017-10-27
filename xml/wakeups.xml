@@ -1,0 +1,36 @@
+<node name="/org/freedesktop/UPower/Wakeups">
+ <interface name="org.freedesktop.DBus.Introspectable">
+  <method name="Introspect">
+   <arg name="data" type="s" direction="out"></arg>
+  </method>
+ </interface>
+ <interface name="org.freedesktop.DBus.Properties">
+  <method name="Get">
+   <arg name="interface" type="s" direction="in"></arg>
+   <arg name="propname" type="s" direction="in"></arg>
+   <arg name="value" type="v" direction="out"></arg>
+  </method>
+  <method name="Set">
+   <arg name="interface" type="s" direction="in"></arg>
+   <arg name="propname" type="s" direction="in"></arg>
+   <arg name="value" type="v" direction="in"></arg>
+  </method>
+  <method name="GetAll">
+   <arg name="interface" type="s" direction="in"></arg>
+   <arg name="props" type="a{sv}" direction="out"></arg>
+  </method>
+ </interface>
+ <interface name="org.freedesktop.UPower.Wakeups">
+  <method name="GetData">
+   <arg name="data" type="a(budss)" direction="out"></arg>
+  </method>
+  <method name="GetTotal">
+   <arg name="value" type="u" direction="out"></arg>
+  </method>
+  <signal name="DataChanged"></signal>
+  <signal name="TotalChanged">
+   <arg type="u"></arg>
+  </signal>
+  <property name="HasCapability" type="b" access="read"></property>
+ </interface>
+</node>

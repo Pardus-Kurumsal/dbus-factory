@@ -1,0 +1,23 @@
+<node>
+  <interface name="org.freedesktop.UPower">
+    <method name="GetCriticalAction">
+      <arg name="action" type="s" direction="out"/>
+    </method>
+    <method name="GetDisplayDevice">
+      <arg name="device" type="o" direction="out"/>
+    </method>
+    <method name="EnumerateDevices">
+      <arg name="devices" type="ao" direction="out"/>
+    </method>
+    <signal name="DeviceRemoved">
+      <arg type="o"/>
+    </signal>
+    <signal name="DeviceAdded">
+      <arg type="o"/>
+    </signal>
+    <property name="LidIsPresent" type="b" access="read"/>
+    <property name="LidIsClosed" type="b" access="read"/>
+    <property name="OnBattery" type="b" access="read"/>
+    <property name="DaemonVersion" type="s" access="read"/>
+  </interface>
+</node>

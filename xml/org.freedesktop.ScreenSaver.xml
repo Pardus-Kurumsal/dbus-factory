@@ -1,0 +1,21 @@
+<node>
+     <interface name="org.freedesktop.ScreenSaver">
+          <method name="Inhibit">
+               <arg type="s" direction="in"></arg>
+               <arg type="s" direction="in"></arg>
+               <arg type="u" direction="out"></arg>
+          </method>
+          <method name="SetTimeout">
+               <arg type="u" direction="in"></arg>
+               <arg type="u" direction="in"></arg>
+               <arg type="b" direction="in"></arg>
+          </method>
+          <method name="SimulateUserActivity"></method>
+          <method name="UnInhibit">
+               <arg type="u" direction="in"></arg>
+          </method>
+          <signal name="IdleOn"></signal>
+          <signal name="CycleActive"></signal>
+          <signal name="IdleOff"></signal>
+     </interface>
+</node>

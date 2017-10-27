@@ -1,0 +1,22 @@
+{
+	"Config":{
+		"OutputDir": ".",
+		"InputDir": "../xml",
+		"BusType": "Session",
+		"DestName": "com.deepin.api.Mime"
+	},
+	"Interfaces":[
+		{
+			"Interface": "com.deepin.api.Manager",
+			"OutFile": "dbus-apps",
+			"XMLFile": "com.deepin.api.Mime.Manager.xml",
+			"ObjectName": "Manager"
+		},
+		{
+			"Interface": "com.deepin.api.Media",
+			"OutFile": "dbus-media",
+			"XMLFile": "com.deepin.api.Mime.Media.xml",
+			"ObjectName": "Media"
+		}
+	]
+}

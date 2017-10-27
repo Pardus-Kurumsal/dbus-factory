@@ -1,0 +1,40 @@
+{
+    "Config": {
+	"OutputDir": ".",
+	"InputDir": "../xml",
+	"BusType": "Session",
+	"DestName": "com.deepin.daemon.Audio"
+    },
+    "Interfaces": [
+    {
+	"Interface": "com.deepin.daemon.Audio",
+	"OutFile": "audio",
+	"XMLFile": "com.deepin.daemon.Audio.xml",
+	"ObjectName": "Audio"
+    },
+    {
+	"Interface":"com.deepin.daemon.Audio.Sink",
+	"OutFile":"sink",
+	"XMLFile":"com.deepin.daemon.Audio.Sink.xml",
+	"Objectname":"AudioSink"
+    },
+    {
+	"Interface":"com.deepin.daemon.Audio.Source",
+	"OutFile":"source",
+	"XMLFile":"com.deepin.daemon.Audio.Source.xml",
+	"ObjectName":"AudioSource"
+    },
+    {
+	"Interface":"com.deepin.daemon.Audio.SinkInput",
+	"OutFile":"sink_input",
+	"XMLFile":"com.deepin.daemon.Audio.SinkInput.xml",
+	"ObjectName":"AudioSinkInput"
+    },
+    {
+	"Interface":"com.deepin.daemon.Audio.Meter",
+	"OutFile":"meter",
+	"XMLFile":"com.deepin.daemon.Audio.Meter.xml",
+	"ObjectName":"AudioMeter"
+    }
+    ]
+}

@@ -1,0 +1,51 @@
+<node>
+  <interface name="com.deepin.daemon.Accounts">
+    <method name="AllowGuestAccount">
+      <arg direction="in" type="b"></arg>
+    </method>
+    <method name="CreateGuestAccount">
+      <arg direction="out" type="s"></arg>
+    </method>
+    <method name="CreateUser">
+      <arg direction="in" type="s"></arg>
+      <arg direction="in" type="s"></arg>
+      <arg direction="in" type="i"></arg>
+    </method>
+    <method name="DeleteUser">
+      <arg direction="in" type="s"></arg>
+      <arg direction="in" type="b"></arg>
+    </method>
+    <method name="FindUserById">
+      <arg direction="in" type="s"></arg>
+      <arg direction="out" type="s"></arg>
+    </method>
+    <method name="FindUserByName">
+      <arg direction="in" type="s"></arg>
+      <arg direction="out" type="s"></arg>
+    </method>
+    <method name="IsPasswordValid">
+      <arg direction="in" type="s"></arg>
+      <arg direction="out" type="b"></arg>
+      <arg direction="out" type="s"></arg>
+      <arg direction="out" type="i"></arg>
+    </method>
+    <method name="IsUsernameValid">
+      <arg direction="in" type="s"></arg>
+      <arg direction="out" type="b"></arg>
+      <arg direction="out" type="s"></arg>
+      <arg direction="out" type="i"></arg>
+    </method>
+    <method name="RandUserIcon">
+      <arg direction="out" type="s"></arg>
+    </method>
+    <signal name="UserAdded">
+      <arg type="s"></arg>
+    </signal>
+    <signal name="UserDeleted">
+      <arg type="s"></arg>
+    </signal>
+    <property access="read" name="UserList" type="as"></property>
+    <property access="read" name="GuestIcon" type="s"></property>
+    <property access="read" name="AllowGuest" type="b"></property>
+  </interface>
+</node>

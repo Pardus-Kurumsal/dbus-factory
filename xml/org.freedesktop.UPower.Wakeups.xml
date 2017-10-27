@@ -1,0 +1,16 @@
+<node>
+  <interface name="org.freedesktop.UPower.Wakeups">
+    <method name="GetData">
+      <arg name="data" type="a(budss)" direction="out"/>
+    </method>
+    <method name="GetTotal">
+      <arg name="value" type="u" direction="out"/>
+    </method>
+    <signal name="DataChanged">
+    </signal>
+    <signal name="TotalChanged">
+      <arg type="u"/>
+    </signal>
+    <property name="HasCapability" type="b" access="read"/>
+  </interface>
+</node>

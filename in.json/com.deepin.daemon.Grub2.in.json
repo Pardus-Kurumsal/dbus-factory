@@ -1,0 +1,22 @@
+{
+	"Config": {
+		"OutputDir": ".",
+		"InputDir": "../xml",
+		"BusType": "Session",
+		"DestName": "com.deepin.daemon.Grub2"
+	},
+	"Interfaces": [
+		{
+			"Interface": "com.deepin.daemon.Grub2",
+			"OutFile": "grub2",
+			"XMLFile": "com.deepin.daemon.Grub2.xml",
+			"ObjectName": "Grub2"
+		},
+		{
+			"Interface": "com.deepin.daemon.Grub2.Theme",
+			"OutFile": "theme",
+			"XMLFile": "com.deepin.daemon.Grub2.Theme.xml",
+			"ObjectName": "Theme"
+		}
+	]
+}
